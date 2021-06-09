@@ -199,7 +199,7 @@
             
 
   
-    <article id="post-SpringBoot使用SSE推送消息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-SpringBoot使用异步执行方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -207,7 +207,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/11/11/SpringBoot%E4%BD%BF%E7%94%A8SSE%E6%8E%A8%E9%80%81%E6%B6%88%E6%81%AF/">SpringBoot使用SSE推送消息</a>
+	  <a class="article-title" href="/2020/11/11/SpringBoot%E4%BD%BF%E7%94%A8%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E6%96%B9%E6%B3%95/">SpringBoot使用异步执行方法</a>
 	
     </h1>
   
@@ -215,7 +215,7 @@
 
   
   
-<a href="/2020/11/11/SpringBoot%E4%BD%BF%E7%94%A8SSE%E6%8E%A8%E9%80%81%E6%B6%88%E6%81%AF/" class="archive-article-date">
+<a href="/2020/11/11/SpringBoot%E4%BD%BF%E7%94%A8%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E6%96%B9%E6%B3%95/" class="archive-article-date">
         <time datetime="2020-11-11T13:22:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-11</time>
 </a>
 
@@ -228,11 +228,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>&emsp;&emsp;服务器推送技术在一些需要实时数据的开发场景会被广泛使用，要获得实时数据，前端轮询的方式明显是被摒弃的，大部分人第一时间想到的就是websocket。之前的一个项目也是用的websocket，但是后期造成了会话缓存不断变大的问题，花了很多时间来解决。因此我就想着找一个替代websocket，简单好用的技术，因此便发现了SSE。以下记录学习SSE踩的坑，尤其看了很多博客和教学视频，带来的<font color='red'><del>SSE就是一直轮询</del></font>的疑惑。</p>
-<p>如果对websocket有兴趣，参考博客：<a href='https://zhengkai.blog.csdn.net/article/details/80275084' target="_blank" rel="noopener noreferrer">SpringBoot2.0集成WebSocket，实现后台向前端推送信息</a></p>
-<p>SSE：Server send Event：服务端发送事件【划重点，服务端推送，而不是轮询请求】。</p>
+    <p>学习博客(非常实用)：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u013467442/article/details/89366155" title="Spring Boot 对多线程支持-提高程序执行效率">Spring Boot 对多线程支持-提高程序执行效率</a><br>CompletableFuture学习博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/cjsblog/p/9267163.html" title="CompletableFuture基本用法">CompletableFuture基本用法</a>、<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6bac52527ca4" title="CompletableFuture 使用详解">CompletableFuture 使用详解</a></p>
+<h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>&emsp;&emsp;在日常开发中，有很多时候都会使用异步的方式去请求方法，以提高代码的执行效率。比如用户购买某件商品，然后需要插入购买记录，物品-1，微信公众号消息推送之类，流程会很多，也会需要很多时间，而SpringBoot为异步提供了更加简单的使用方式，通过两个注解即可实现异步调用方法。</p>
     
-    <a class="article-more-a" href="/2020/11/11/SpringBoot%E4%BD%BF%E7%94%A8SSE%E6%8E%A8%E9%80%81%E6%B6%88%E6%81%AF/#more">more >></a>
+    <a class="article-more-a" href="/2020/11/11/SpringBoot%E4%BD%BF%E7%94%A8%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E6%96%B9%E6%B3%95/#more">more >></a>
     
     
 
@@ -270,7 +269,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2020/11/11/SpringBoot%E4%BD%BF%E7%94%A8SSE%E6%8E%A8%E9%80%81%E6%B6%88%E6%81%AF/">展开全文 >></a>
+      <a class="article-more-a" href="/2020/11/11/SpringBoot%E4%BD%BF%E7%94%A8%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E6%96%B9%E6%B3%95/">展开全文 >></a>
     </p>
     
 
